@@ -1,6 +1,6 @@
 var x1 = parseInt(prompt("Enter 3 length of sides of the triangle. THE FIRST:", )),
     x2 = parseInt(prompt("THE SECOND:", )),
-    x3 = parseInt(prompt("THE THIRD:", ))
+    x3 = parseInt(prompt("THE THIRD:", ));
 
 var p, s, c1, c2, c3, x12, x23, x13;
 
