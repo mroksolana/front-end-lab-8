@@ -3,7 +3,7 @@ function collectIds(movies) {
 		return R.rating > 3.0;
 	});
 
-	return getTransformedArray(filtered, function (R) {
+	return getTransformedArray(filtred, function (R) {
 		return R.id;
 	});
 
