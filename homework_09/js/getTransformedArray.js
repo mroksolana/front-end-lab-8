@@ -5,7 +5,7 @@ function increment(myNumber) {
 
 function getTransformedArray(Array, increment) {
 	let newArray = [];
-	forEach(myArray, function (item, index) {
+	forEach(newArray, function (item, index) {
 		newArray[index] = increment(item);
 	});
 	return newArray;
