@@ -3,7 +3,7 @@ function predicateFunction(myNumber) {
 }
 
 
-function getFiltresArray(myArray, predicateFunction) {
+function getFiltredArray(myArray, predicateFunction) {
 	let newArray = [];
 	forEach(myArray, function (item, index) {
 		if (predicateFunction(item)) {
