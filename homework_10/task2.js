@@ -58,10 +58,10 @@ function getCombatHistory() {
 function fight() {
 	if (block()) {
 		return false;
-	} else if (champion.attack >= getStats().hp) {
-		getStats().hp = 0;
+	} else if (champion.attack >= fighter.getStats().hp) {
+		fighter.getStats().hp = 0;
 		result.wins++;
-		getCombatHistory().loses++;
+		fighter.getCombatHistory().loses++;
 		return true;
 	} else {
 		getStats().hp -= champion.attack;
