@@ -25,29 +25,29 @@
  * @param {Fighter} fighter - The fighter
  * DO NOT MODIFY
  */
+
 function showResult(fighter) {
   console.log('Fighter', fighter.getName());
   console.log('- Combat stats:', fighter.getCombatHistory());
   console.log('- Properties:', fighter.getStats());
 }
 
-
- function fighter(champion) {
+function fighter(champion) {
    let result = {
      wins: 0,
      loses: 0
    }
  }
  
- function getName() {
+function getName() {
    return champion.name;
- }
+}
 
- function block() {
+function block() {
   return (Math.round(Math.random()) < 0.5)
-  }
+}
 
- function getStats() {
+function getStats() {
   return champion;
 }
  
@@ -67,28 +67,6 @@ function showResult(fighter) {
 
 
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * The following code must be valid after implementation!
- */ 
 
 let fighter1 = fighter({name: 'John', attack: 100, hp: 100});
 let fighter2 = fighter({name: 'Kayn', attack: 50, hp: 300});
