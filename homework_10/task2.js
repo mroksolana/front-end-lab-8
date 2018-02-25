@@ -25,52 +25,65 @@
  * @param {Fighter} fighter - The fighter
  * DO NOT MODIFY
  */
-
 function showResult(fighter) {
-  console.log('Fighter', fighter.getName());
-  console.log('- Combat stats:', fighter.getCombatHistory());
-  console.log('- Properties:', fighter.getStats());
+	console.log('Fighter', fighter.getName());
+	console.log('- Combat stats:', fighter.getCombatHistory());
+	console.log('- Properties:', fighter.getStats());
 }
 
+
 function fighter(champion) {
-   let result = {
-     wins: 0,
-     loses: 0
-   }
- }
- 
+	let result = {
+		wins: 0,
+		loses: 0
+	}
+}
+
 function getName() {
-   return champion.name;
+	return champion.name;
 }
 
 function block() {
-  return (Math.round(Math.random()) < 0.5)
+	return (Math.round(Math.random()) < 0.5)
 }
 
 function getStats() {
-  return champion;
+	return champion;
 }
- 
- function getCombatHistory() {
-   return result;
- }
 
- function fights() {
+function getCombatHistory() {
+	return result;
+}
 
+function fight() {
+	if (block()) {
+		return false;
+	} else if (champion.attack >= getStats().hp) {
+		getStats().hp = 0;
+		result.wins++;
+		getCombatHistory().loses++;
+		return true;
+	} else {
+		getStats().hp -= champion.attack;
+		return true;
+	}
+}
 
-
-
-
-
-
-
-
-
- }
-
-let fighter1 = fighter({name: 'John', attack: 100, hp: 100});
-let fighter2 = fighter({name: 'Kayn', attack: 50, hp: 300});
-let fighter3 = fighter({name: 'Bill', attack: 40, hp: 100});
+let fighter1 = fighter({
+	name: 'John',
+	attack: 100,
+	hp: 100
+});
+let fighter2 = fighter({
+	name: 'Kayn',
+	attack: 50,
+	hp: 300
+});
+let fighter3 = fighter({
+	name: 'Bill',
+	attack: 40,
+	hp: 100
+});
 
 fighter1.fight(fighter2); // true, fighter 1 make damage to fighter 2
 fighter1.fight(fighter3); // true, fighter 1 make damage to fighter 3
@@ -86,7 +99,7 @@ showResult(fighter1);
 //  * - Combat stats: { wins: 0, loses: 0 }
 //  * - Properties: { name: 'Kayn', attack: 50, hp: 200 }
 //  */
-showResult(fighter2); 
+showResult(fighter2);
 
 // /**
 //  * Fighter Bill
