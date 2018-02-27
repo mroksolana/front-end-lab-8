@@ -36,6 +36,7 @@ function createTree(structure) {
 		}
 
 	}
+	return newUl;
 
 }
 
@@ -55,7 +56,7 @@ function openTree() {
 }
 
 
-let result = document.createElement("newDiv");
+let result = document.createElement("div");
 createTree(structure, result);
 
 rootNode.appendChild(result);
