@@ -8,7 +8,6 @@ function createTree(structure) {
 	for (let i = 0; i < structure.length; i++) {
 		let newLi = document.createElement("li");
 		let newIcon = document.createElement("i");
-		let newParag = document.createElement("p");
 		let newDiv = document.createElement("div");
 
 		newIcon.className = "material-icons";
@@ -16,12 +15,14 @@ function createTree(structure) {
 		newLi.appendChild(newDiv);
 		newUl.appendChild(newLi);
 		newDiv.appendChild(newIcon);
-		newDiv.appendChild(newParag);
 
 		if (structure[i].folder) {
+      const span = document.createElement("span");
+      span.innerHTML = structure[i].title;
+      newDiv.appendChild(span);
 			newIcon.innerHTML = "folder";
-			newParag.addEventListener("onclick", openTree);
-
+      newDiv.addEventListener("onclick", openTree);
+      
 			if (structure[i].children) {
 				createTree(structure[i].children, newLi);
 			} else {
@@ -36,8 +37,7 @@ function createTree(structure) {
 		}
 
 	}
-	return newUl;
-
+return newUl;
 }
 
 
@@ -57,6 +57,6 @@ function openTree() {
 
 
 let result = document.createElement("div");
-createTree(structure, result);
+createTree(structure)
 
-rootNode.appendChild(result);
+rootNode.appendChild(createTree(structure));
