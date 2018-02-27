@@ -55,7 +55,7 @@ function openTree() {
 }
 
 
-let result = document.createElement("div");
+let result = document.createElement("newDiv");
 createTree(structure, result);
 
 rootNode.appendChild(result);
