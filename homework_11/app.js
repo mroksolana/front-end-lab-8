@@ -17,7 +17,7 @@ function createTree(structure) {
 		newDiv.appendChild(newIcon);
 
 		if (structure[i].folder) {
-      const span = document.createElement("span");
+   		   const span = document.createElement("span");
       span.innerHTML = structure[i].title;
       newDiv.appendChild(span);
 			newIcon.innerHTML = "folder";
